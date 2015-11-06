@@ -1,7 +1,7 @@
 {
   "name": "jstix",
   "version": "0.0.1",
-  "description": "",
+  "description": "JavaScript XML binding using Polymer observe-js as a binding library",
   "main": "src/jstix.js",
   "directories": {
     "example": "examples"
@@ -15,9 +15,12 @@
   },
   "author": "Mathias Lebout",
   "license": "MIT",
-  "readmeFilename": "README.md",
   "devDependencies": {},
   "dependencies": {
     "observe-js": "^0.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mathiaslebout/jstix/issues"
+  },
+  "homepage": "https://github.com/mathiaslebout/jstix"
 }
