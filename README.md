@@ -1,11 +1,34 @@
 # jstix
 JavaScript XML binding using Polymer observe-js as a binding library
 
-# why jstix
+# Why jstix
 jstix is born from the need to bind XML text nodes to model instances so that when the model is changed, the binded text node is updated.
 
-# example
+# Example
 Some XML document is loaded from a REST api and need to be edited.
 Each text node in the XML document is potentially editable.
 An ExtJS panel displays data from a store that loads editable XML text nodes as model instances.
 jstix allows you to automatically bind model instances to their corresponding XML text nodes, so that changes done in the panel update the XML document.
+
+# Usage
+```javascript
+var jstix = new Jstix(xml);
+jstix.process(callbackFn, path);
+```
+Where:
+- xml is an XML string or DOM Document to be edited
+- callbackFn is a function that uses the XML node passed as parameter to create an object
+- path is a string representing the path to the value of the XML node in the object returned by the function
+
+# API
+The Jstix exposes:
+```javascript
+{
+    // Processes all XML nodes in the document
+    process: function(callbackFn, path) {},
+    // Get the XML DOM Document 
+    getDoc: function() {},
+    // Releases all resources 
+    release: function() {}
+}
+```
