@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+
+<head>
+<title></title>
+<meta charset="utf-8">
+<script src="../node_modules/observe-js/src/observe.js"></script>
+<script src="../src/jstix.js"></script>
+
+    
+<script type="text/javascript">
+    
+var createRecord = function(node) {
+    var record = null;
+    var name = null;
+    var value = null;
+    switch(node.nodeType) {
+    case 3:
+        var name = node.parentNode.nodeName;
+        var value = node.nodeValue;
+        break;
+    }
+    if (name && value) {
+        record = {
+            value: value,
+        };
+        store.push(record);        
+    }
+    return record;
+}; 
+    
+var sSource = "<a id=\"a\"><b id=\"b\">hey!<\/b><\/a>";
+var store = [];
+
+var xml2str = function(xmlDom) {
+    return new XMLSerializer().serializeToString(xmlDom);
+};
+      
+var jstix = new Jstix(sSource);
+jstix.process(createRecord, 'value');
+
+console.log('before: ' + sSource);
+
+var idx = 0;
+store.forEach(function (record) {
+    record.value = 'test_' + idx++;
+});  
+
+setTimeout(function() {
+    console.log('after: ' + xml2str(jstix.getDoc()));
+    jstix.release();
+    
+}, 500);
+    
+// input are the XML string and callback function used to create observable object
+// the callback function has the node as a parameter
+</script>
+
+</head>
+<body>
+</body>
+
+</html>

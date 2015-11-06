@@ -1,0 +1,23 @@
+{
+  "name": "jstix",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/jstix.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathiaslebout/jstix"
+  },
+  "author": "Mathias Lebout",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {},
+  "dependencies": {
+    "observe-js": "^0.4.2"
+  }
+}
