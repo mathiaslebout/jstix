@@ -2,6 +2,7 @@
   "name": "jstix",
   "version": "0.0.1",
   "description": "JavaScript XML binding using Polymer observe-js as a binding library",
+  "keywords": ["JavaScript", "XML", "Data binding"],
   "main": "src/jstix.js",
   "directories": {
     "example": "examples"
