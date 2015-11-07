@@ -1,6 +1,6 @@
 {
   "name": "jstix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript XML binding using Polymer observe-js as a binding library",
   "keywords": ["JavaScript", "XML", "Data binding"],
   "main": "src/jstix.js",
